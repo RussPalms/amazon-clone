@@ -3,6 +3,14 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode
 
+#excluding virtual environment, node, and python cache
+.venv/
+.pyenv.cfg
+.node
+node_modules/
+__pycache__/
+**node_modules
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
