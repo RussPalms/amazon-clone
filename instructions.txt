@@ -117,4 +117,21 @@
 
 32. Add the number of items currently present in the basket in the nav bar.
 
-33. 
+33. Now we can set up firebase:
+        https://firebase.google.com
+        "Get started"
+        "Create project"
+        Build
+        Firestore
+        Create Database
+        Start in Test Mode
+        Enable
+        Authentication
+        get started
+        Set up sign-in method
+        pencil icon near Email/Password
+        Settings
+        Project Settings
+        (Web) <>
+
+34. 
