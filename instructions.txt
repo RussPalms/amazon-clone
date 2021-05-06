@@ -1,0 +1,108 @@
+1. Create virtual nope environment with conda:
+    conda create --name amazon-clone_node nodejs
+
+2. To install the node virtual environment using conda you need to add conda-forge 
+   to your list of channels with this command:
+    conda config --append channels conda-forge.
+   This tells conda to also look on the conda-forge channel when you search for packages.
+   Channels are basically servers for people to host packages on and the community-driven
+   conda-forge is usually a good place to start when packages are not available via the
+   standard channels.
+
+3. Now we can install the virtual environment for Node.js:
+    conda install nodeenv
+
+4. The above 2 steps are only if you're installing the virtual environment using:
+    py -3 -m venv .venv
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+    .venv\scripts\activate
+   This would be the case if you were not using conda and are on windows.
+
+5. Now clear the npm cache so you can install react:
+    npm cache verify
+
+6. If working on windows follow the steps here:
+    https://docs.npmjs.com/try-the-latest-stable-version-of-npm
+
+6. Create the react app:
+    npm install -g create-react-app
+
+7. Run the app:
+    npm start
+
+8. Now delete these three files in the src directory:
+    App.test.js
+    logo.svg
+    setupTests.js
+   These files are not relevant.
+
+9.  Go to App.js and remove the following line of code:
+        import logo from “./logo.svg”;
+
+10. As well as everything under the first div.
+
+11. Remove everything in App.css and add the following lines to index.css:
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+12. Set up and install react router:
+        npm install react-router-dom
+    This is to ensure that we can move from one page to another, since react is a 
+    single page application, it doesn't support multiple routes by default.
+
+13. Create a new component in the source file and name it:
+        Home.js
+
+14. Then create a css file for that component:
+        Home.css
+
+15. Install the VSCode extension named ES7 React/Redux/GraphQL/React-Native snippets.
+    This will make the boiler plates for your react components.
+
+16. Go to the Home.js component and type "rfce", hit enter on the first option and that should
+    autocomplete the boiler plate.
+
+17. We don't see anything in the browser yet, because we haven't set up our entrypoint.
+    We do that by importing the dependencies to App.js.:
+        import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+18. We want our Home component to be rendered on the default route which is "/" so
+    to do that we import it.
+
+19. The Route component is used under the Switch component. The Route component 
+    specifies the rules of the Routes and components to render at specific route.
+    For example in this case we have the Home component render at “/” route. 
+    We will be adding more routes to this.
+
+20. Now to make the Amazon navbar. Start by installing the packges we need to use 
+    Material Icons:
+        npm install @material-ui/core @material-ui/icons
+    Once you installed the dependencies, you can use it to display SVG icons which are
+    provided by Material UI. Material UI is a very popular UI library for React 
+    which has a lot of prebuilt components just as icons which makes life easier.
+
+21. Make a new component called Header.js and a css file for it called Header.css.
+
+22. We have the component ready. Before we actually start designing it, we need 
+    to include it in Router so that we can actually display it. In App.js where you 
+    mentioned Route for “/” route, let’s include the Header component in it too. Your 
+    updated route should look like this
+
+23. Now to make the navbar.
+
+24. Start creating the home page.
+
+25. Make a new component which will be Product:
+    Product.js
+    Product.css
+
+26. Now that our Homepage is working, now we can move over to some interesting stuff, 
+    the React Context API. It is a application level state management so that you can 
+    access important data from any component when necessary.
+
+27. Make a file called StateProvider.js.
+
+
+    
