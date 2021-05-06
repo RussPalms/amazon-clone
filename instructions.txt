@@ -167,4 +167,17 @@
 42. Now we need to set a listener to Firebase so that our React 
     app knows that user is authenticated. Just add this useEffect block in App.js
 
-43.
+43. Now work on the basket. Make a new component called 'Checkout'.
+        Checkout.js
+        Checkout.css
+
+44. Then make two other components called 'CheckoutProduct' and 'Subtotal'
+        CheckoutProduct.js
+        CheckoutProduct.css
+        Subtotal.js
+        Subtotal.css
+
+45. Since in the CheckoutProduct component we have a new reducer command 
+    “REMOVE_FROM_BASKET”, let’s add it in reducer.js
+
+46. 
