@@ -6,11 +6,19 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 // this creates a links which connects routes without reloading pages
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
+import { auth } from "./firebase";
 
 function Header() {
     // We have brought in the states, and the dispatch
     // functions so that we can dispatch actions to the reducer.
     const [{ basket, user }, dispatch] = useStateValue();
+    // The handleAuthentication function checks if the user
+    // is logged in or not, if else, logs out when the user clicks on the greeting.
+    const handleAuthentication = () => {
+        if(user) {
+            auth.signOut();
+        }
+    }
 
     return (
         <div className="header">
@@ -29,16 +37,30 @@ function Header() {
             </div>
 
             {/* this is putting everything else to the right */}
+            {/* We check if the user is authenticated. If yes,
+            then the user is greeted else the user has an option to login. */}
             <div className="header__nav">
-                
-                <div className="header__option">
-                    <span className="header__optionLineOne">Hello Guest</span>
-                    <span className="header__optionLineTwo">Sign In</span>
-                </div>
+                <Link to={!user && '/login'}>
+                    <div className="header__option">
+                        <span className="header__optionLineOne">
+                            Hello {!user ? 'Guest' : user.email}
+                        </span>
+                        <span className="header__optionLineTwo">
+                            {user ? 'Sign Out' : 'Sign In'}
+                        </span>
+                    </div>
+                </Link>
+
+                <Link to='/orders'>
+                    <div className="header__option">
+                        <span className="header__optionLineOne">returns</span>
+                        <span className="header__optionLineTwo">& Orders</span>
+                    </div>
+                </Link>
 
                 <div className="header__option">
-                    <span className="header__optionLineOne">Returns</span>
-                    <span className="header_optionLineTwo">& Orders</span>
+                    <span className="header__optionLineOne">Your</span>
+                    <span className="header__optionLineTwo">Prime</span>
                 </div>
 
                 <Link to="/checkout">
@@ -55,7 +77,7 @@ function Header() {
             </div>
 
         </div>
-    )
+    );
 }
 
 export default Header

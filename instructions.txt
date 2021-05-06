@@ -134,4 +134,37 @@
         Project Settings
         (Web) <>
 
-34. 
+34. We won't be copyting this:
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.5.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.5.0/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+35. Install firebase:
+        npm install -g firebase-tools && npm install firebase && firebase login
+
+36. Now go to firebase and set the config options.
+
+37. Make a new file called firebase.js and paste the configuration from firebase.
+
+38. Let’s make the use of the firebase package we just installed through npm and let’s
+    edit the firebase.js file so that we can use authentication and the database from 
+    your project.
+
+39. Now set up authentication.
+
+40. Create a new component called Login:
+        Login.js
+        Login.css
+
+41. Now that we have a login page let's make it functionality.
+
+42. Now we need to set a listener to Firebase so that our React 
+    app knows that user is authenticated. Just add this useEffect block in App.js
+
+43.
