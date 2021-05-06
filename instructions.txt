@@ -104,5 +104,17 @@
 
 27. Make a file called StateProvider.js.
 
+28. Make another filed called reducer.js, which will define all of your application
+    level states and define actions to make changes to the state.
 
+29. The reducer is a place where you declare all the application level states which
+    can be used later by the application.
+
+30. We need to use this reducer to manage our application level state. To do so, 
+    let’s introduce everything in the index.js.
     
+31. Now to add the basket functionality.
+
+32. Add the number of items currently present in the basket in the nav bar.
+
+33. 
