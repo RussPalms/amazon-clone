@@ -39,6 +39,7 @@ function Login() {
                     history.push('/')
                 }
             })
+                .catch(error => alert(error.message))
     }
 
     return (
@@ -62,8 +63,10 @@ function Login() {
                             e => setEmail(e.target.value)} 
                     />
                     <h5>Password</h5>
-                    <input type='text' value={password} onChange={
-                        e => setEmail(e.target.value)}
+                    {/* <input type='text' value={password} onChange={ */}
+                    {/* changed the type to password, because we need to block out the text which in this case is the password */}
+                    <input type='password' value={password} onChange={
+                        e => setPassword(e.target.value)}
                     />
                     <button type='submit'className='login__signInButton'>
                             Sign In

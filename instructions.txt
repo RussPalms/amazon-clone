@@ -25,6 +25,8 @@
     https://docs.npmjs.com/try-the-latest-stable-version-of-npm
 
 6. Create the react app:
+	npx create-react-app .
+not this
     npm install -g create-react-app
 
 7. Run the app:

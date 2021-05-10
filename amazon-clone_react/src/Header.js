@@ -41,7 +41,7 @@ function Header() {
             then the user is greeted else the user has an option to login. */}
             <div className="header__nav">
                 <Link to={!user && '/login'}>
-                    <div className="header__option">
+                    <div onClick={handleAuthentication} className="header__option">
                         <span className="header__optionLineOne">
                             Hello {!user ? 'Guest' : user.email}
                         </span>
@@ -80,4 +80,4 @@ function Header() {
     );
 }
 
-export default Header
+export default Header;
